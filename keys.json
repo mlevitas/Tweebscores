@@ -1,0 +1,8 @@
+{
+  "API1": {
+    "consumer_key": "", "consumer_secret": ""
+  },
+  "API2": {
+    "bearer_token": ""
+  }
+}
