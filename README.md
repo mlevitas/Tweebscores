@@ -11,5 +11,7 @@ COMM-751 final project
 4. 04-get_ids_with_phi.py
    - Retrieves user_ids for elites in Tweetscores elites file
 5. 05-actual_compare.py
-   - Compares friends lists of participants with Tweetscores elites file; adds had_match (TRUE/FALSE)
-      to show if a friends list had a match in the elites file
+   - Compares friends lists of participants with Tweetscores elites file; adds had_match (TRUE/FALSE) to show if a friends list had a match in the elites file
+
+## Cleaning/preparing elites CSVs
+See [raw_tweetscores/README.md](raw_tweetscores/README.md) for the origin of the data and the process for normalizing the data
