@@ -1,7 +1,7 @@
 import csv
 import os
 
-id_file = open("ids_and_scores/ids_and_scores.csv", 'r')
+id_file = open("elites_ids_and_scores.csv", 'r')
 reader = csv.reader(id_file)
 
 elites = {}
@@ -18,7 +18,7 @@ for row in reader:
     elites[int(row[1])] = float(row[2])
 
 # This is where we'll put our results
-results = open("ids_and_scores/results.csv", 'w')
+results = open("results/friend_list_scores.csv", 'w')
 
 # Each user we care about has a file with a friends list in the
 # `user_friends` directory

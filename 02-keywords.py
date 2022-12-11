@@ -1,8 +1,5 @@
 import csv
 import sys
-import json
-import requests
-import time
 keywords = ["anime", "manga", "otaku"]
 
 
@@ -31,6 +28,7 @@ def read_csv():
                         is_otaku = True
                         break
                 writer.writerow({"id": userid, "username": username, "is_otaku": is_otaku})
+
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':

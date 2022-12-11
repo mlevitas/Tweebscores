@@ -1,5 +1,5 @@
 import json
-
+import sys
 import tweepy
 import csv
 
@@ -32,7 +32,8 @@ def get_with_api(api, user_name):
 
 
 def get_from_twitter(tweepy_api, tweepy_client):
-    with open("csvs/ids.csv", 'r') as ids:
+    users_to_query = sys.argv[1]
+    with open(users_to_query, 'r') as ids:
         reader = csv.reader(ids)
         for row in reader:
             user_name = row[1]
@@ -49,12 +50,12 @@ def get_from_twitter(tweepy_api, tweepy_client):
 
 def setup_and_query():
     keys = json.load(open("keys.json"))
-    # prof keys (uses v1.1)
+    # Use API v1.1
     auth = tweepy.OAuth1UserHandler(consumer_key=keys["API1"]["consumer_key"],
                                     consumer_secret=keys["API1"]["consumer_secret"])
     tweepy_api = tweepy.API(auth, wait_on_rate_limit=True)
 
-    # waifu hunt project (uses v2)
+    # Use API v2
     bearer_token = keys["API2"]["bearer_token"]
     tweepy_client = tweepy.Client(bearer_token=bearer_token)
 
